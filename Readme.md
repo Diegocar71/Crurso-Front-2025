@@ -18,7 +18,7 @@ Podran encontrar desde diferentes lineas de Pesaca, pasando pr cualquier accesor
 
 ## Demo
 
-https://github.com/Diegocar71/Crurso-Front-2025
+https://diegocar71.github.io/Crurso-Front-2025/
 
 
 
