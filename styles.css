@@ -1,0 +1,139 @@
+
+.video {
+    display: block; 
+    margin: 0 auto;
+    border: 5px solid black;
+    border-radius: 10px;
+    height: 400px; 
+    width: 700px;
+}
+
+
+.alineado {
+    /* position: absolute; */
+    text-align: center;
+    left: 30px; 
+    display: block; 
+    margin: auto;
+}
+
+
+.mi-lista li {
+    margin: 0 10px; 
+}
+
+.mi-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex; 
+  text-decoration: none;
+  color: red;
+}
+    
+.nav-class {
+    position: absolute;
+    top: 300px;
+    list-style-type: none; 
+    left:500px;
+    padding: 0;
+    margin: 0;
+    display: flex;          
+    justify-content: space-around; 
+}
+
+.nav-class li {
+    margin-right: 20px;    
+}
+
+.nav-class li:last-child {
+    margin-right: 0;        
+}
+
+.nav-class a {
+    text-decoration: none; 
+    color: #000;            
+    padding: 10px; 
+    font-size: 25px;
+    font-weight: bold;           
+}
+
+.nav-class a:hover {
+    color: #007BFF;         
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.producto {
+    background-color: #2196f3;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 20px;
+    box-sizing: border-box;
+}
+
+img {
+    margin-right: 40px; 
+}
+
+nav {
+    margin-top: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, textarea, button {
+    width: 100%; 
+    padding: 10px;
+    box-sizing: border-box; 
+}
+
+button {
+    width: auto; 
+    align-self: flex-end; 
+    padding: 10px 20px;
+}
+
+
+body {
+    background-image: url('Img/water-1867636_1920.jpg'); 
+    background-size: cover;
+    background-position: center;
+    /* background-repeat: no-repeat;  */
+    height: 100vh;             
+    margin: 0;
+    font-family: 'Permanent Marker';
+}
+
+hr {
+    border: none; 
+    border-top: 4px 
+    solid blue;
+}
+
+footer {
+    text-align: center;
+}
+
+section {
+    text-align: left!important;
+    width: 50%; 
+    margin: 20px;
+    padding: 15px;
+    border: 2px solid #007BFF;
+    background-color: lightslategray;
+}

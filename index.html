@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta Implemento de Pesca</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <br>
+        <h1 class="alineado">Venta de Implementos de Pesca</h1>
+        <img src="Img/LogoT.png" alt="logo de la Pagina">
+
+        <nav>
+            <ul class="nav-class mi-lista">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+ 
+        <video controls poster="Img/poster.jpg" class="video">
+            <source src="Video/Video.mp4" type="video/mp4" >
+            <track src="Subtitulo.vtt" kind="subtitles" srclang="es" label="Español">
+        </video>
+
+        <section id="productos">
+            <div class="producto"></div>
+                <img src="/Img/D_NQ_NP_622277-MLA47308614601_082021-O.jpg" alt="">
+                <h2>Producto</h2>
+                <a href=""></a>
+            </div>
+            <div class="producto"></div>
+                <img src="/Img/D_NQ_NP_704087-MLA44285816030_122020-O.jpg" alt="">
+                <h2>Producto</h2>
+                <a href=""></a>
+            </div>
+            <div class="producto"></div>
+                <img src="/Img/D_NQ_NP_902853-MLA49377799223_032022-O.jpg" alt="">
+                <h2>Producto</h2>
+                <a href=""></a>
+            </div>
+            <div class="producto"></div>
+                <img src="/Img/Untitled design.jpg" alt="">
+                <h2>Producto</h2>
+                <a href=""></a>
+            </div>
+        </section>
+
+        <section class="alineado" id="contacto">
+            <h3>Contáctanos</a><br><br>
+            <form id="miFormulario" action="https://formspree.io/f/mldegevo" method="post">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="correo">Correo Electronico</label>
+                <input type="mail" id="correo" name="correo" required>
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p> 2024 Todos los Derechos Reservados </p>
+    </footer>
+    
+</body>
+</html>
+
+<script>
+    document.getElementById('miFormulario').addEventListener('submit', function(event) {
+      setTimeout(() => {
+        document.getElementById('nombre').value = '';
+        document.getElementById('correo').value = '';
+        document.getElementById('mensaje').value = '';
+      }, 500); 
+    });
+</script>
+
