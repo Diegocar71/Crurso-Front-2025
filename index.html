@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,65 +9,192 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     
     <header>
-        <br>
+        
         <h1 class="alineado">Venta de Implementos de Pesca</h1>
         <img src="Imagen/LogoT.png" alt="logo de la Pagina">
 
         <nav>
-            <ul class="nav-class mi-lista">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Acerca de</a></li>
-                <li><a href="#productos">Productos Varios</a></li>
+            <ul class="nav-class">
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#reseñas">Reseñas</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
-
-    </header>
-
-    <main>
- 
+                
+        <div class="titulo">
+            <h2>Lo que tenes que Saber ...</h2>
+        </div>
         <video controls poster="Imagen/poster.jpg" class="video">
             <source src="Video/Video.mp4" type="video/mp4" >
             <track src="Subtitulo.vtt" kind="subtitles" srclang="es" label="Español">
         </video>
 
-        <section id="productos">
-            <div class="producto"></div>
+    </header>
+
+    <main>
+
+        <section id="productos" class="alineado productos" >
+            <div class="titulo">
+                <h2>Productos Destacados</h2>
+            </div>
+            <div class="producto">
                 <img src="/Imagen/1.jpg" alt="">
-                <h2>Producto</h2>
-                <a href=""></a>
+                <h3>Equipo Completo Pesca pesada de río</h3>
+                <a href="#producto-uno">Detalle del Producto</a>
             </div>
-            <div class="producto"></div>
+            <div class="producto">
                 <img src="/Imagen/2.jpg" alt="">
-                <h2>Producto</h2>
-                <a href=""></a>
+                <h3>8 Lineas completas con repuestos</h3>
+                <a href="#producto-dos">Detalle del Producto</a>
             </div>
-            <div class="producto"></div>
+            <div class="producto">
                 <img src="/Imagen/3.jpg" alt="">
-                <h2>Producto</h2>
-                <a href=""></a>
+                <h3>Todo para armar 5 o mas lineas de fondo</h3>
+                <a href="#producto-tres">Detalle del Producto</a>
             </div>
-            <div class="producto"></div>
+            <div class="producto">
                 <img src="/Imagen/4.jpg" alt="">
-                <h2>Producto</h2>
-                <a href=""></a>
+                <h3>Caja con todo para pesca liviana de flote</h3>
+                <a href="#producto-cuatro">Detalle del Producto</a>
             </div>
         </section>
 
-        <section class="alineado" id="contacto">
-            <h3>Contáctanos</a><br><br>
-            <form id="miFormulario" action="https://formspree.io/f/mldegevo" method="post">
+        <section id="det-productos" class="alineado productos">
+            <div class="titulo">
+                <h2>Detalle de los Productos</h2>
+            </div>
+            <div id="producto-uno" class="producto">
+                <h3>Equipo Completo Pesca pesada de río</h3>
+                <img src="/Imagen/1.jpg" alt="">
+            </div>
+            <div class="det-producto">
+                <ul class="listado">
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Caña tres tramos de 1.2 mts</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Reel frontal </li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Boya tipo pera tamaño grande</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Caja Plastica 6 lts de capacidad, con bandeja extraible</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">4 lineas armadas y con anzuelos para fondo</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">5 plomadas de distinto peso</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">16 anzuelos de tres tamaños distintos</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Perlas de repuesto para armado de lineas</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Mosquetones y ganchos</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Tanza de repuesto</li>
+                </ul>
+            </div>
+            <div id="producto-dos" class="producto">
+                <h3>8 Lineas completas con repuestos</h3>
+                <img src="/Imagen/2.jpg" alt="">
+            </div>
+            <div class="det-producto">
+                <ul class="listado">
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Boya tipo pera tamaño grande</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Caja Plastica 6 lts de capacidad, con bandeja extraible</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">4 lineas armadas y con anzuelos para fondo</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">5 plomadas de distinto peso</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">16 anzuelos de tres tamaños distintos</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Perlas de repuesto para armado de lineas</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Mosquetones y ganchos</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Tanza de repuesto</li>
+                </ul>
+            </div>
+            <div id="producto-tres" class="producto">
+                <h3>Todo para armar 5 o mas lineas de fondo</h3>
+                <img src="/Imagen/3.jpg" alt="">
+            </div>
+            <div class="det-producto">
+                <ul class="listado">
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Tablas y carretes porta lineas</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Dos rollos de tanza</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">4 lineas armadas y con anzuelos para fondo</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">9 plomadas de distinto peso</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">4 porta masa para cebo</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Variedad de Perlas de repuesto para armado de lineas</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Variedad de Mosquetones y ganchos</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Tanza de repuesto</li>
+                </ul>
+            </div>
+            <div id="producto-cuatro" class="producto">
+                <h3>Caja con todo para pesca liviana de flote</h3>
+                <img src="/Imagen/4.jpg" alt="">
+            </div>
+            <div class="det-producto">
+                <ul class="listado">
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Caja Plastica 6 lts de capacidad, con bandeja extraible</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Porta señuelos para cinturon</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Pinza saca anzuelos</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Linterna para la cabeza</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Tabla y cuchillo para limpiar pescados</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Balanza/Metro para pescados</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">3 lineas armadas y con anzuelos para fondo</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">4 plomadas de distinto peso</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Variedad de Tanzas</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Variedad de Perlas de repuesto para armado de lineas</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Variedad de Mosquetones y ganchos</li>
+                    <li><img src="/Imagen/pez.png" alt="Ícono" class="icono">Variedad de Boyas</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="reseñas" class="grid-container alineado" >
+            <div class="header reseñas-section">
+                <h2>Reseñas de Clientes</h2>
+            </div>
+            <div class="card reseña">
+                <h3>Juan Pérez</h3>
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>Excelente producto, superó mis expectativas.</p>
+            </div>
+            <div class="card reseña">
+                <h3>María López</h3>
+                <p>⭐⭐⭐</p>
+                <p>Buena calidad, pero el envío tardó un poco.</p>
+            </div>
+            <div class="card reseña">
+                <h3>María Fernandez</h3>
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>Muy Buena calidad.</p>
+            </div>
+            <div class="card reseña">
+                <h3>José Fernandez</h3>
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>Muy Buena calidad y Precio.</p>
+            </div>
+            <div class="footer">
+                <h3>Deja tu Reseña</h3>
+                <form id="reseña-form">    
+                    <input type="text" id="tunombre" placeholder="Tu nombre" required>
+                        <select id="calificacion" required>
+                            <option value="">Calificación</option>
+                            <option value="5">⭐⭐⭐⭐⭐</option>
+                            <option value="4">⭐⭐⭐⭐</option>
+                            <option value="3">⭐⭐⭐</option>
+                            <option value="2">⭐⭐</option>
+                            <option value="1">⭐</option>
+                        </select>
+                    <textarea id="comentario" placeholder="Escribe tu Reseña" required></textarea>
+                    <button type="submit">Enviar Reseña</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="contacto" class="alineado">
+            <div>
+                <h3>Contáctanos</a>
+            </div>
+            <form id="mensaje-form" action="https://formspree.io/f/mldegevo" method="post">
                 <label for="nombre">Nombre</label>
                 <input type="text" id="nombre" name="nombre" required>
                 <label for="correo">Correo Electronico</label>
                 <input type="mail" id="correo" name="correo" required>
                 <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea>
-                <button type="submit">Enviar</button>
+                <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+                <button type="submit">Enviar Mensaje</button>
             </form>
         </section>
         
@@ -75,17 +203,54 @@
     <footer>
         <p> 2024 Todos los Derechos Reservados </p>
     </footer>
-    
+
+    <a href="#" id="scrollToTop" class="scroll-to-top">
+        <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+    </a>
+
 </body>
+
 </html>
 
 <script>
-    document.getElementById('miFormulario').addEventListener('submit', function(event) {
+
+    //Vacia los valores de los inputs del Mensaje
+    document.getElementById('mensaje-form').addEventListener('submit', function(event) {
       setTimeout(() => {
         document.getElementById('nombre').value = '';
         document.getElementById('correo').value = '';
         document.getElementById('mensaje').value = '';
       }, 500); 
     });
+
+    //Vacia los valores de los inputs de la Reseña
+    document.getElementById('reseña-form').addEventListener('submit', function(event) {
+      setTimeout(() => {
+        document.getElementById('tunombre').value = '';
+        document.getElementById('calificacion').value = '';
+        document.getElementById('comentario').value = '';
+      }, 500); 
+    });
+
+    //Flecha para volver del scroll
+    document.addEventListener('DOMContentLoaded', function() {
+        const scrollToTopButton = document.getElementById('scrollToTop');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 200) { 
+                scrollToTopButton.style.display = 'block';
+            } else {
+                scrollToTopButton.style.display = 'none';
+            }
+        });
+        scrollToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+
+
 </script>
 

@@ -6,29 +6,15 @@
     border-radius: 10px;
     height: 400px; 
     width: 700px;
+    margin-block-end: 20px;
 }
 
-
 .alineado {
-    /* position: absolute; */
     text-align: center;
     left: 30px; 
     display: block; 
     margin: auto;
-}
-
-
-.mi-lista li {
-    margin: 0 10px; 
-}
-
-.mi-lista {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: inline-flex; 
-  text-decoration: none;
-  color: red;
+    margin-bottom: 20px; 
 }
     
 .nav-class {
@@ -40,21 +26,19 @@
     margin: 0;
     display: flex;          
     justify-content: space-around; 
+
 }
 
 .nav-class li {
-    margin-right: 20px;    
-}
-
-.nav-class li:last-child {
-    margin-right: 0;        
+    margin-right: 100px; 
+    margin-top: 10px;   
 }
 
 .nav-class a {
     text-decoration: none; 
     color: #000;            
     padding: 10px; 
-    font-size: 25px;
+    font-size: 40px;
     font-weight: bold;           
 }
 
@@ -65,21 +49,117 @@
 .productos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content:space-between;
     padding: 20px;
 }
 
 .producto {
+    width: calc(50% - 10px);
+    margin-bottom: 20px; 
     background-color: #2196f3;
     color: white;
     padding: 20px;
     margin: 10px;
-    flex: 1 1 20px;
+    flex: 0 0 calc(50% - 20px); 
     box-sizing: border-box;
 }
 
-img {
-    margin-right: 40px; 
+.det-producto {
+    width: calc(50% - 10px);
+    margin-bottom: 20px; 
+    padding-top: 100px;
+    flex: 0 0 calc(50% - 20px); 
+    box-sizing: border-box;
+}
+
+.titulo {
+    width: 100%;
+}
+
+.reseñas-section {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.reseña {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 0;
+    transform:translateY(-5px);
+}
+
+.grid-container {
+    gap: 10px;
+}
+
+.heder {
+    grid-column: 1 / 3;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: auto-fit, minmax(250px, 1fr);
+    grid-column: 1 / 2;
+    gap: 10px;
+    padding: 10px;
+    transition: transform 0.2s ; 
+    border-radius: 8px;
+
+}
+
+.card:hover {
+    transform: translateY(-20px); 
+}
+
+.footer {
+    grid-column: 1 / 3;
+}
+
+.listado li .icono {
+    width: 30px;
+    height: auto;
+    padding-top: 10px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.listado {
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+}
+
+h1{
+    padding-top: 20px;
+    font-size:3rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+input, select, textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #5cb85c;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: auto; 
+    align-self: flex-end; 
+    padding: 10px 20px;
+}
+
+button:hover {
+    background-color: #4cae4c;
 }
 
 nav {
@@ -102,18 +182,10 @@ input, textarea, button {
     box-sizing: border-box; 
 }
 
-button {
-    width: auto; 
-    align-self: flex-end; 
-    padding: 10px 20px;
-}
-
-
 body {
     background-image: url('Imagen/water.jpg'); 
     background-size: cover;
     background-position: center;
-    /* background-repeat: no-repeat;  */
     height: 100vh;             
     margin: 0;
     font-family: 'Permanent Marker';
@@ -131,9 +203,78 @@ footer {
 
 section {
     text-align: left!important;
-    width: 50%; 
+    width: 60%; 
     margin: 20px;
     padding: 15px;
     border: 2px solid #007BFF;
     background-color: lightslategray;
 }
+
+section img {
+    width: 100%;
+    height: 100%;
+    height: auto;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    color: #2600ff;
+    box-shadow: none;
+    display: none;
+    text-decoration: none;
+}
+
+.scroll-to-top:hover {
+    color: skyblue;
+}
+
+.scroll-to-top i {
+    line-height: 0;
+}
+
+@media (max-width: 768px) {
+    
+    .video {
+        width: 90%; 
+        height: auto; 
+    }
+
+    .nav-class {
+        top: 250px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .productos {
+        flex-direction: column; 
+    }
+
+    .producto {
+        width: 100%; 
+        margin: 0 0 20px;
+     }
+
+     .det-producto {
+        width: 100%;
+        margin-bottom: 20px; 
+        padding-top: 0px;
+        flex: 0 0 calc(50% - 20px); 
+        box-sizing: border-box;
+    }
+    .alineado {
+        left: 0; 
+    }
+
+    section {
+        width: 90%; 
+    }
+
+}
+
