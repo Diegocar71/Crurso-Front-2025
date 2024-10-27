@@ -83,12 +83,6 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.reseña {
-    border-bottom: 1px solid #e0e0e0;
-    padding: 10px 0;
-    transform:translateY(-5px);
-}
-
 .grid-container {
     gap: 10px;
 }
@@ -98,14 +92,16 @@
 }
 
 .card {
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 10px 20px 5px rgba(0, 0, 0, 0.5);
+    transform:translateY(-5px);
     display: grid;
     grid-template-columns: auto-fit, minmax(250px, 1fr);
     grid-column: 1 / 2;
     gap: 10px;
-    padding: 10px;
+    padding: 20px;
     transition: transform 0.2s ; 
     border-radius: 8px;
-
 }
 
 .card:hover {
