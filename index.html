@@ -213,7 +213,24 @@
 </html>
 
 <script>
-
+    //Flecha para volver del scroll
+    document.addEventListener('DOMContentLoaded', function() {
+            const scrollToTopButton = document.getElementById('scrollToTop');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 200) { 
+                    scrollToTopButton.style.display = 'block';
+                } else {
+                    scrollToTopButton.style.display = 'none';
+                }
+            });
+            scrollToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
     //Vacia los valores de los inputs del Mensaje
     document.getElementById('mensaje-form').addEventListener('submit', function(event) {
       setTimeout(() => {
@@ -229,28 +246,10 @@
         document.getElementById('tunombre').value = '';
         document.getElementById('calificacion').value = '';
         document.getElementById('comentario').value = '';
+        document.getElementById('reseña-form').scrollIntoView({ behavior: 'smooth' });
       }, 500); 
+      
     });
-
-    //Flecha para volver del scroll
-    document.addEventListener('DOMContentLoaded', function() {
-        const scrollToTopButton = document.getElementById('scrollToTop');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 200) { 
-                scrollToTopButton.style.display = 'block';
-            } else {
-                scrollToTopButton.style.display = 'none';
-            }
-        });
-        scrollToTopButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    });
-
-
+    
 </script>
 
