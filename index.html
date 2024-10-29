@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https:/cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    
+
 </head>
 
 <body>
@@ -33,6 +33,7 @@
         <div class="titulo">
             <h2>Lo que tenes que Saber ...</h2>
         </div>
+
         <video controls poster="imagen/poster.jpg" class="video">
             <source src="vervideo/elementos.mp4" type="video/mp4" >
             <track src="Subtitulo.vtt" kind="subtitles" srclang="es" label="Español">
@@ -66,7 +67,12 @@
                 <h3>Caja con todo para pesca liviana de flote</h3>
                 <a href="#producto-cuatro">Detalle del Producto</a>
             </div>
+            <div class="boton-container">
+                <button class="boton-volver" onclick="window.history.back()">Volver</button>
+            </div>
         </section>
+
+        
 
         <section id="det-productos" class="alineado productos">
             <div class="titulo">
@@ -90,6 +96,9 @@
                     <li><img src="imagen/pez.png" alt="Ícono" class="icono">Tanza de repuesto</li>
                 </ul>
             </div>
+            <div class="boton-container">
+                <button class="boton-volver" onclick="window.history.back()">Volver</button>
+            </div>
             <div id="producto-dos" class="producto">
                 <h3>8 Lineas completas con repuestos</h3>
                 <img src="imagen/2.jpg" alt="">
@@ -106,6 +115,9 @@
                     <li><img src="imagen/pez.png" alt="Ícono" class="icono">Tanza de repuesto</li>
                 </ul>
             </div>
+            <div class="boton-container">
+                <button class="boton-volver" onclick="window.history.back()">Volver</button>
+            </div>
             <div id="producto-tres" class="producto">
                 <h3>Todo para armar 5 o mas lineas de fondo</h3>
                 <img src="imagen/3.jpg" alt="">
@@ -121,6 +133,9 @@
                     <li><img src="imagen/pez.png" alt="Ícono" class="icono">Variedad de Mosquetones y ganchos</li>
                     <li><img src="imagen/pez.png" alt="Ícono" class="icono">Tanza de repuesto</li>
                 </ul>
+            </div>
+            <div class="boton-container">
+                <button class="boton-volver" onclick="window.history.back()">Volver</button>
             </div>
             <div id="producto-cuatro" class="producto">
                 <h3>Caja con todo para pesca liviana de flote</h3>
@@ -142,31 +157,36 @@
                     <li><img src="imagen/pez.png" alt="Ícono" class="icono">Variedad de Boyas</li>
                 </ul>
             </div>
+            <div class="boton-container">
+                <button class="boton-volver" onclick="window.history.back()">Volver</button>
+            </div>
         </section>
 
-        <section id="reseñas" class="grid-container alineado" >
-            <div class="header reseñas-section">
+        <section id="reseñas" class="alineado">
+            <div class="header reseñas-titulo">
                 <h2>Reseñas de Clientes</h2>
             </div>
-            <div class="card">
-                <h3>Juan Pérez</h3>
-                <p>⭐⭐⭐⭐⭐</p>
-                <p>Excelente producto, superó mis expectativas.</p>
-            </div>
-            <div class="card">
-                <h3>María López</h3>
-                <p>⭐⭐⭐</p>
-                <p>Buena calidad, pero el envío tardó un poco.</p>
-            </div>
-            <div class="card">
-                <h3>María Fernandez</h3>
-                <p>⭐⭐⭐⭐⭐</p>
-                <p>Muy Buena calidad.</p>
-            </div>
-            <div class="card">
-                <h3>José Fernandez</h3>
-                <p>⭐⭐⭐⭐⭐</p>
-                <p>Muy Buena calidad y Precio.</p>
+            <div class="reseñas">
+                <div class="reseña">
+                    <h3>Juan Pérez</h3>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <cite>Excelente producto, superó mis expectativas.</cite>
+                </div>
+                <div class="reseña">
+                    <h3>María López</h3>
+                    <p>⭐⭐⭐</p>
+                    <cite>Buena calidad, pero el envío tardó un poco.</cite>
+                </div>
+                <div class="reseña">
+                    <h3>María Fernandez</h3>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <cite>Muy Buena calidad.</cite>
+                </div>
+                <div class="reseña">
+                    <h3>José Fernandez</h3>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <cite>Muy Buena calidad y Precio.</cite>
+                </div>
             </div>
             <div class="footer">
                 <h3>Deja tu Reseña</h3>
@@ -183,6 +203,9 @@
                     <textarea id="comentario" placeholder="Escribe tu Reseña" required></textarea>
                     <button type="submit">Enviar Reseña</button>
                 </form>
+                <div class="boton-container">
+                    <button class="boton-volver" onclick="window.history.back()">Volver</button>
+                </div>
             </div>
         </section>
 
@@ -199,6 +222,9 @@
                 <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
                 <button type="submit">Enviar Mensaje</button>
             </form>
+            <div class="boton-container">
+                <button class="boton-volver" onclick="window.history.back()">Volver</button>
+            </div>
         </section>
         
     </main>
@@ -207,33 +233,12 @@
         <p> 2024 Todos los Derechos Reservados </p>
     </footer>
 
-    <a href="#" id="scrollToTop" class="scroll-to-top">
-        <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
-    </a>
-
 </body>
 
 </html>
 
 <script>
-    //Flecha para volver del scroll
-    document.addEventListener('DOMContentLoaded', function() {
-            const scrollToTopButton = document.getElementById('scrollToTop');
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > 200) { 
-                    scrollToTopButton.style.display = 'block';
-                } else {
-                    scrollToTopButton.style.display = 'none';
-                }
-            });
-            scrollToTopButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        });
+
     //Vacia los valores de los inputs del Mensaje
     document.getElementById('mensaje-form').addEventListener('submit', function(event) {
       setTimeout(() => {
