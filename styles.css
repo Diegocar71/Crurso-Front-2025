@@ -11,7 +11,8 @@
 
 .alineado {
     text-align: center;
-    left: 30px; 
+    align-items: center;
+    left: 0px; 
     display: block; 
     margin: auto;
     margin-bottom: 20px; 
@@ -245,9 +246,6 @@ section img {
         padding-top: 0px;
         flex: 0 0 calc(50% - 20px); 
         box-sizing: border-box;
-    }
-    .alineado {
-        left: 0; 
     }
 
     .reseñas {
