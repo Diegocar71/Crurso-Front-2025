@@ -184,4 +184,3 @@ navItems.forEach(item => {
     });
 });
 
-    
