@@ -21,10 +21,10 @@
     <header>
    
         <div class="barra-superior">
-            <div class="logo">Mi Compras</div>
+            <div class="titulo-carrito">Mi Compras</div>
             <div class="carrito" title="Ver Carrito" onclick="mostrarCarrito()">
                 <i class="fas fa-shopping-cart"></i>
-                <span id="carritoValor">Carrito: 0 Productos</span>
+                <span id="carritoCantidad">Carrito: 0 Productos</span>
             </div>
         </div>
         
@@ -59,136 +59,26 @@
 
     <main>
 
-        <section id="productos" class="alineado productos" >
+        <section id="productos" class="alineado">
             <div class="titulo">
                 <h2>Productos Destacados</h2>
             </div>
-            <div class="producto">
-                <img src="imagen/1.jpg" alt="">
-                <h3>Equipo Completo Pesca pesada de río</h3>
-                <a href="#producto-uno">Detalle del Producto</a>
-            </div>
-            <div class="producto">
-                <img src="imagen/2.jpg" alt="">
-                <h3>8 Lineas completas con repuestos</h3>
-                <a href="#producto-dos">Detalle del Producto</a>
-            </div>
-            <div class="producto">
-                <img src="imagen/3.jpg" alt="">
-                <h3>Todo para armar 5 o mas lineas de fondo</h3>
-                <a href="#producto-tres">Detalle del Producto</a>
-            </div>
-            <div class="producto">
-                <img src="imagen/4.jpg" alt="">
-                <h3>Caja con todo para pesca liviana de flote</h3>
-                <a href="#producto-cuatro">Detalle del Producto</a>
-            </div>
+            <div id="productos-contenedor" class="producto"></div> 
             <div class="contenedor-botones">
-                <button class="boton-volver" onclick="window.history.back()">Volver</button>
+                <button class="boton-volver" onclick="window.history.back()" title="Ubicacion anterior">Volver</button>
             </div>
         </section>
-
+        
         <section id="det-productos" class="alineado productos">
             <div class="titulo">
                 <h2>Detalle de los Productos</h2>
             </div>
-            <div id="producto-uno" class="producto">
-                <h3>Equipo Completo Pesca pesada de río</h3>
-                <img src="imagen/1.jpg" alt="">
-            </div>
-            <div class="det-producto">
-                <ul class="listado">
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Caña tres tramos de 1.2 mts</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Reel frontal </li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Boya tipo pera tamaño grande</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Caja Plastica 6 lts de capacidad, con bandeja extraible</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">4 lineas armadas y con anzuelos para fondo</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">5 plomadas de distinto peso</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">16 anzuelos de tres tamaños distintos</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Perlas de repuesto para armado de lineas</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Mosquetones y ganchos</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Tanza de repuesto</li>
-                    <br>
-                    <li>Precio del Producto $ <a id="precioprod">3.800</a></li>
-                </ul>
-            </div>
+            <div id="det-productos-contenedor"></div> 
             <div class="contenedor-botones">
-                <button class="boton-volver boton-carrito" onclick="agregarAlCarrito('Equipo Completo Pesca pesada de río',3800)" title="Agregar al Carrito"><i class="fas fa-shopping-cart"></i></button>
-                <button class="boton-volver" onclick="window.history.back()" title="Volver">Volver</button>
-            </div>
-            
-            <div id="producto-dos" class="producto">
-                <h3>8 Lineas completas con repuestos</h3>
-                <img src="imagen/2.jpg" alt="">
-            </div>
-            <div class="det-producto">
-                <ul class="listado">
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Boya tipo pera tamaño grande</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Caja Plastica 6 lts de capacidad, con bandeja extraible</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">4 lineas armadas y con anzuelos para fondo</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">5 plomadas de distinto peso</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">16 anzuelos de tres tamaños distintos</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Perlas de repuesto para armado de lineas</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Mosquetones y ganchos</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Tanza de repuesto</li>
-                    <br>
-                    <li>Precio del Producto $ <a id="precio">2.400</a></li>
-                </ul>
-            </div>
-            <div class="contenedor-botones">
-                <button class="boton-volver boton-carrito" onclick="agregarAlCarrito('8 Lineas completas con repuestos',2400)" title="Agregar al Carrito"><i class="fas fa-shopping-cart"></i></button>
-                <button class="boton-volver" onclick="window.history.back()" title="Volver">Volver</button>
-            </div>
-            <div id="producto-tres" class="producto">
-                <h3>Todo para armar 5 o mas lineas de fondo</h3>
-                <img src="imagen/3.jpg" alt="">
-            </div>
-            <div class="det-producto">
-                <ul class="listado">
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Tablas y carretes porta lineas</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Dos rollos de tanza</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">4 lineas armadas y con anzuelos para fondo</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">9 plomadas de distinto peso</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">4 porta masa para cebo</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Variedad de Perlas de repuesto para armado de lineas</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Variedad de Mosquetones y ganchos</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Tanza de repuesto</li>
-                    <br>
-                    <li>Precio del Producto $ <a id="precio">1.200</a></li>
-                </ul>
-            </div>
-            <div class="contenedor-botones">
-                <button class="boton-volver boton-carrito" onclick="agregarAlCarrito('Todo para armar 5 o mas lineas de fondo',1200)" title="Agregar al Carrito"><i class="fas fa-shopping-cart"></i></button>
-                <button class="boton-volver" onclick="window.history.back()" title="Volver">Volver</button>
-            </div>
-            <div id="producto-cuatro" class="producto">
-                <h3>Caja con todo para pesca liviana de flote</h3>
-                <img src="imagen/4.jpg" alt="">
-            </div>
-            <div class="det-producto">
-                <ul class="listado">
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Caja Plastica 6 lts de capacidad, con bandeja extraible</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Porta señuelos para cinturon</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Pinza saca anzuelos</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Linterna para la cabeza</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Tabla y cuchillo para limpiar pescados</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Balanza/Metro para pescados</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">3 lineas armadas y con anzuelos para fondo</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">4 plomadas de distinto peso</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Variedad de Tanzas</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Variedad de Perlas de repuesto para armado de lineas</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Variedad de Mosquetones y ganchos</li>
-                    <li><img src="imagen/pez.png" alt="Ícono" class="icono">Variedad de Boyas</li>
-                    <br>
-                    <li>Precio del Producto $ <a id="precio">5.300</a></li>
-                </ul>
-            </div>
-            <div class="contenedor-botones">
-                <button class="boton-volver boton-carrito" onclick="agregarAlCarrito('Caja con todo para pesca liviana de flote',5300)" title="Agregar al Carrito"><i class="fas fa-shopping-cart"></i></button>
-                <button class="boton-volver" onclick="window.history.back()" title="Volver">Volver</button>
+                <button class="boton-volver" onclick="window.history.back()" title="Ubicacion anterior">Volver</button>
             </div>
         </section>
-
+                
         <section id="reseñas" class="alineado">
             <div class="header reseñas-titulo">
                 <h2>Reseñas de Clientes</h2>
@@ -234,7 +124,7 @@
                     <button type="submit">Enviar Reseña</button>
                 </form>
                 <div class="contenedor-botones">
-                    <button class="boton-volver" onclick="window.history.back()">Volver</button>
+                    <button class="boton-volver" onclick="window.history.back()" title="Ubicacion anterior">Volver</button>
                 </div>
             </div>
         </section>
@@ -253,7 +143,7 @@
                 <button type="submit">Enviar Mensaje</button>
             </form>
             <div class="contenedor-botones">
-                <button class="boton-volver" onclick="window.history.back()">Volver</button>
+                <button class="boton-volver" onclick="window.history.back()" title="Ubicacion anterior">Volver</button>
             </div>
         </section>
         

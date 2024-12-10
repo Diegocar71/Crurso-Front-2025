@@ -27,9 +27,9 @@ function actualizarCarrito() {
         totalCarrito += carrito[producto].cantidad * carrito[producto].precio;
     }
 
-    let carritoValor = document.getElementById("carritoValor");
+    let carritoCantidad = document.getElementById("carritoCantidad");
     let totalProductos = Object.values(carrito).reduce((total, producto) => total + producto.cantidad, 0);
-    carritoValor.innerText = `Carrito: ${totalProductos} Productos`;
+    carritoCantidad.innerText = `Carrito: ${totalProductos} Productos`;
 
     let listaCarrito = document.getElementById("lista-carrito");
     listaCarrito.innerHTML = '';  
@@ -112,4 +112,58 @@ document.getElementById("reseña-form").addEventListener("submit", function (eve
 
     document.getElementById("reseña-form").reset();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("productos.json")
+        .then(response => response.json())
+        .then(data => {
+            
+            const productosContenedor = document.getElementById("productos-contenedor");
+            const detalleContenedor = document.getElementById("det-productos-contenedor");
+
+            data.forEach(producto => {
+
+                const productoDiv = document.createElement("div");
+                productoDiv.innerHTML = `
+                    <img src="${producto.imagen}" alt="${producto.titulo}">
+                    <h3>${producto.titulo}</h3>
+                    <a href="#${producto.id}">Detalle del Producto</a>
+                `;
+                productosContenedor.appendChild(productoDiv);
+
+                const detalleDiv = document.createElement("div");
+                detalleDiv.id = producto.id;
+                detalleDiv.innerHTML = `
+                    <div class="producto">
+                    <h3>${producto.titulo}</h3>
+                    <img src="${producto.imagen}" alt="${producto.titulo}">
+                    <div class="contenedor-botones-det">
+                        <button class="boton-carrito" onclick="agregarAlCarrito('${producto.titulo}', ${producto.precio})" title="Agregar al Carrito">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <button id='volver-det' class="boton-volver" onclick="window.history.back()" title='Volver'>Volver</button>
+                    </div>
+                    </div>
+                    <div class="det-producto">
+                    <ul class="listado">
+                        ${producto.detalle.map(det => `
+                            <li>
+                                <img src="imagen/pez.png" alt="Ícono" class="icono">
+                                ${det}
+                            </li>
+                        `).join("")}
+                        <br>
+                        <li>Precio del Producto $ <a>${producto.precio}</a></li>
+                    </ul>
+                    
+                    </div>
+                    
+                `;
+                detalleContenedor.appendChild(detalleDiv);
+            });
+        })
+        .catch(error => console.error("Error cargando los productos:", error));
+});
+
+
     

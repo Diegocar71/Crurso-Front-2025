@@ -1,0 +1,72 @@
+[
+    {
+        "id": "producto-uno",
+        "titulo": "Equipo Completo Pesca pesada de río",
+        "imagen": "imagen/1.jpg",
+        "detalle": [
+            "Caña tres tramos de 1.2 mts",
+            "Reel frontal",
+            "Boya tipo pera tamaño grande",
+            "Caja Plastica 6 lts de capacidad, con bandeja extraible",
+            "4 lineas armadas y con anzuelos para fondo",
+            "5 plomadas de distinto peso",
+            "16 anzuelos de tres tamaños distintos",
+            "Perlas de repuesto para armado de lineas",
+            "Mosquetones y ganchos",
+            "Tanza de repuesto"
+        ],
+        "precio": 3800
+    },
+    {
+        "id": "producto-dos",
+        "titulo": "8 Lineas completas con repuestos",
+        "imagen": "imagen/2.jpg",
+        "detalle": [
+            "Boya tipo pera tamaño grande",
+            "Caja Plastica 6 lts de capacidad, con bandeja extraible",
+            "4 lineas armadas y con anzuelos para fondo",
+            "5 plomadas de distinto peso",
+            "16 anzuelos de tres tamaños distintos",
+            "Perlas de repuesto para armado de lineas",
+            "Mosquetones y ganchos",
+            "Tanza de repuesto"
+        ],
+        "precio": 2400
+    },
+    {
+        "id": "producto-tres",
+        "titulo": "Todo para armar 5 o más líneas de fondo",
+        "imagen": "imagen/3.jpg",
+        "detalle": [
+            "Tablas y carretes porta líneas",
+            "Dos rollos de tanza",
+            "4 líneas armadas y con anzuelos para fondo",
+            "9 plomadas de distinto peso",
+            "4 porta masa para cebo",
+            "Variedad de Perlas de repuesto para armado de líneas",
+            "Variedad de Mosquetones y ganchos",
+            "Tanza de repuesto"
+        ],
+        "precio": 1200
+    },
+    {
+        "id": "producto-cuatro",
+        "titulo": "Caja con todo para pesca liviana de flote",
+        "imagen": "imagen/4.jpg",
+        "detalle": [
+            "Caja Plástica 6 lts de capacidad, con bandeja extraíble",
+            "Porta señuelos para cinturón",
+            "Pinza saca anzuelos",
+            "Linterna para la cabeza",
+            "Tabla y cuchillo para limpiar pescados",
+            "Balanza/Metro para pescados",
+            "3 líneas armadas y con anzuelos para fondo",
+            "4 plomadas de distinto peso",
+            "Variedad de Tanza",
+            "Variedad de Perlas de repuesto para armado de líneas",
+            "Variedad de Mosquetones y ganchos",
+            "Variedad de Boyas"
+        ],
+        "precio": 5300
+    }
+]
