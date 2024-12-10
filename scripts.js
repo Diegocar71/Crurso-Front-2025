@@ -138,9 +138,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     <h3>${producto.titulo}</h3>
                     <img src="${producto.imagen}" alt="${producto.titulo}">
                     <div class="contenedor-botones-det">
-                        <button class="boton-carrito" onclick="agregarAlCarrito('${producto.titulo}', ${producto.precio})" title="Agregar al Carrito">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
                         <button id='volver-det' class="boton-volver" onclick="window.history.back()" title='Volver'>Volver</button>
                     </div>
                     </div>
@@ -153,7 +150,13 @@ document.addEventListener("DOMContentLoaded", function () {
                             </li>
                         `).join("")}
                         <br>
-                        <li>Precio del Producto $ <a>${producto.precio}</a></li>
+                        <div class="boton-texto">
+                            <button class="boton-carrito" onclick="agregarAlCarrito('${producto.titulo}', ${producto.precio})" title="Agregar al Carrito">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                            <li><span>Precio del Producto </span> &nbsp;$&nbsp; <a>${producto.precio}</a></li>
+                        </div>
+
                     </ul>
                     
                     </div>
@@ -165,5 +168,20 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => console.error("Error cargando los productos:", error));
 });
 
+const navItems = document.querySelectorAll('.nav-class li');
+
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const audioFile = item.getAttribute('data-audio');
+        if (audioFile) {
+            const audio = new Audio(audioFile);
+            audio.play();
+            setTimeout(() => {
+                audio.pause();
+                audio.currentTime = 0; 
+            }, 5000); 
+        }
+    });
+});
 
     
