@@ -5,6 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Venta Implemento de Pesca</title>
     
     <link rel="preconnect" href="https:/fonts.googleapis.com">
@@ -16,9 +17,24 @@
 </head>
 
 <body>
-    
+
     <header>
+   
+        <div class="barra-superior">
+            <div class="logo">Mi Compras</div>
+            <div class="carrito" title="Ver Carrito" onclick="mostrarCarrito()">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="carritoValor">Carrito: 0 Productos</span>
+            </div>
+        </div>
         
+        <div id="detalle-carrito" class="oculto barra-superior">
+            <h3>Productos en el Carrito</h3>
+            <ul id="lista-carrito"></ul>
+            <p id="total-carrito">Total: $0</p>
+            <button class="boton-volver boton-carrito" onclick="cerrarCarrito()">Cerrar</button>
+        </div>
+
         <h1 class="alineado">Venta de Implementos de Pesca</h1>
         <img class="alineado" src="imagen/LogoT2.png" alt="logo de la Pagina">
 
@@ -67,7 +83,7 @@
                 <h3>Caja con todo para pesca liviana de flote</h3>
                 <a href="#producto-cuatro">Detalle del Producto</a>
             </div>
-            <div class="boton-container">
+            <div class="contenedor-botones">
                 <button class="boton-volver" onclick="window.history.back()">Volver</button>
             </div>
         </section>
@@ -92,11 +108,15 @@
                     <li><img src="imagen/pez.png" alt="Ícono" class="icono">Perlas de repuesto para armado de lineas</li>
                     <li><img src="imagen/pez.png" alt="Ícono" class="icono">Mosquetones y ganchos</li>
                     <li><img src="imagen/pez.png" alt="Ícono" class="icono">Tanza de repuesto</li>
+                    <br>
+                    <li>Precio del Producto $ <a id="precioprod">3.800</a></li>
                 </ul>
             </div>
-            <div class="boton-container">
-                <button class="boton-volver" onclick="window.history.back()">Volver</button>
+            <div class="contenedor-botones">
+                <button class="boton-volver boton-carrito" onclick="agregarAlCarrito('Equipo Completo Pesca pesada de río',3800)" title="Agregar al Carrito"><i class="fas fa-shopping-cart"></i></button>
+                <button class="boton-volver" onclick="window.history.back()" title="Volver">Volver</button>
             </div>
+            
             <div id="producto-dos" class="producto">
                 <h3>8 Lineas completas con repuestos</h3>
                 <img src="imagen/2.jpg" alt="">
@@ -111,10 +131,13 @@
                     <li><img src="imagen/pez.png" alt="Ícono" class="icono">Perlas de repuesto para armado de lineas</li>
                     <li><img src="imagen/pez.png" alt="Ícono" class="icono">Mosquetones y ganchos</li>
                     <li><img src="imagen/pez.png" alt="Ícono" class="icono">Tanza de repuesto</li>
+                    <br>
+                    <li>Precio del Producto $ <a id="precio">2.400</a></li>
                 </ul>
             </div>
-            <div class="boton-container">
-                <button class="boton-volver" onclick="window.history.back()">Volver</button>
+            <div class="contenedor-botones">
+                <button class="boton-volver boton-carrito" onclick="agregarAlCarrito('8 Lineas completas con repuestos',2400)" title="Agregar al Carrito"><i class="fas fa-shopping-cart"></i></button>
+                <button class="boton-volver" onclick="window.history.back()" title="Volver">Volver</button>
             </div>
             <div id="producto-tres" class="producto">
                 <h3>Todo para armar 5 o mas lineas de fondo</h3>
@@ -130,10 +153,13 @@
                     <li><img src="imagen/pez.png" alt="Ícono" class="icono">Variedad de Perlas de repuesto para armado de lineas</li>
                     <li><img src="imagen/pez.png" alt="Ícono" class="icono">Variedad de Mosquetones y ganchos</li>
                     <li><img src="imagen/pez.png" alt="Ícono" class="icono">Tanza de repuesto</li>
+                    <br>
+                    <li>Precio del Producto $ <a id="precio">1.200</a></li>
                 </ul>
             </div>
-            <div class="boton-container">
-                <button class="boton-volver" onclick="window.history.back()">Volver</button>
+            <div class="contenedor-botones">
+                <button class="boton-volver boton-carrito" onclick="agregarAlCarrito('Todo para armar 5 o mas lineas de fondo',1200)" title="Agregar al Carrito"><i class="fas fa-shopping-cart"></i></button>
+                <button class="boton-volver" onclick="window.history.back()" title="Volver">Volver</button>
             </div>
             <div id="producto-cuatro" class="producto">
                 <h3>Caja con todo para pesca liviana de flote</h3>
@@ -153,10 +179,13 @@
                     <li><img src="imagen/pez.png" alt="Ícono" class="icono">Variedad de Perlas de repuesto para armado de lineas</li>
                     <li><img src="imagen/pez.png" alt="Ícono" class="icono">Variedad de Mosquetones y ganchos</li>
                     <li><img src="imagen/pez.png" alt="Ícono" class="icono">Variedad de Boyas</li>
+                    <br>
+                    <li>Precio del Producto $ <a id="precio">5.300</a></li>
                 </ul>
             </div>
-            <div class="boton-container">
-                <button class="boton-volver" onclick="window.history.back()">Volver</button>
+            <div class="contenedor-botones">
+                <button class="boton-volver boton-carrito" onclick="agregarAlCarrito('Caja con todo para pesca liviana de flote',5300)" title="Agregar al Carrito"><i class="fas fa-shopping-cart"></i></button>
+                <button class="boton-volver" onclick="window.history.back()" title="Volver">Volver</button>
             </div>
         </section>
 
@@ -164,7 +193,7 @@
             <div class="header reseñas-titulo">
                 <h2>Reseñas de Clientes</h2>
             </div>
-            <div class="reseñas">
+            <div class="reseñas" id="contenedor-reseñas">
                 <div class="reseña">
                     <h3>Juan Pérez</h3>
                     <p>⭐⭐⭐⭐⭐</p>
@@ -188,20 +217,23 @@
             </div>
             <div class="footer">
                 <h3>Deja tu Reseña</h3>
-                <form id="reseña-form">    
+                <form id="reseña-form">  
+                    <label>Ingresa tu nombre</label>  
                     <input type="text" id="tunombre" placeholder="Tu nombre" required>
-                        <select id="calificacion" required>
-                            <option value="">Calificación</option>
-                            <option value="5">⭐⭐⭐⭐⭐</option>
-                            <option value="4">⭐⭐⭐⭐</option>
-                            <option value="3">⭐⭐⭐</option>
-                            <option value="2">⭐⭐</option>
-                            <option value="1">⭐</option>
-                        </select>
+                    <label>Sellecciona Tu calificación</label>
+                    <select id="calificacion" required>
+                        <option value="">Calificación</option>
+                        <option value="5">⭐⭐⭐⭐⭐</option>
+                        <option value="4">⭐⭐⭐⭐</option>
+                        <option value="3">⭐⭐⭐</option>
+                        <option value="2">⭐⭐</option>
+                        <option value="1">⭐</option>
+                    </select>
+                    <label>Deja tu Comentario</label>
                     <textarea id="comentario" placeholder="Escribe tu Reseña" required></textarea>
                     <button type="submit">Enviar Reseña</button>
                 </form>
-                <div class="boton-container">
+                <div class="contenedor-botones">
                     <button class="boton-volver" onclick="window.history.back()">Volver</button>
                 </div>
             </div>
@@ -220,7 +252,7 @@
                 <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
                 <button type="submit">Enviar Mensaje</button>
             </form>
-            <div class="boton-container">
+            <div class="contenedor-botones">
                 <button class="boton-volver" onclick="window.history.back()">Volver</button>
             </div>
         </section>
@@ -231,31 +263,10 @@
         <p> 2024 Todos los Derechos Reservados </p>
     </footer>
 
+    <script src="scripts.js"></script>
+
 </body>
 
 </html>
 
-<script>
-
-    //Vacia los valores de los inputs del Mensaje
-    document.getElementById('mensaje-form').addEventListener('submit', function(event) {
-      setTimeout(() => {
-        document.getElementById('nombre').value = '';
-        document.getElementById('correo').value = '';
-        document.getElementById('mensaje').value = '';
-      }, 500); 
-    });
-
-    //Vacia los valores de los inputs de la Reseña
-    document.getElementById('reseña-form').addEventListener('submit', function(event) {
-      setTimeout(() => {
-        document.getElementById('tunombre').value = '';
-        document.getElementById('calificacion').value = '';
-        document.getElementById('comentario').value = '';
-        document.getElementById('reseña-form').scrollIntoView({ behavior: 'smooth' });
-      }, 500); 
-      
-    });
-    
-</script>
 

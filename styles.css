@@ -1,3 +1,65 @@
+.barra-superior {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #dfe4e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
+}
+
+.barra-superior .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.barra-superior .carrito {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.barra-superior .carrito i {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+.barra-superior .carrito span {
+    font-size: 1rem;
+    color: #333;
+}
+
+.oculto {
+    display: none;
+}
+
+.contenedor-producto {
+    display: flex;
+    align-items: center;
+}
+
+.boton-eliminar {
+    background-color: red; 
+    color: white; 
+    border: none; 
+    padding: 5px 10px; 
+    cursor: pointer;
+    font-size: 14px; 
+    border-radius: 5px;
+    margin-right: 10px; 
+    width: 80px;
+}
+
+.boton-eliminar:hover {
+    background-color: darkred;
+}
 
 .video {
     display: block; 
@@ -44,7 +106,6 @@
     color: #007BFF;
     font-size: 3rem;
 }
-
 
 .productos {
     display: flex;
@@ -122,14 +183,14 @@
     vertical-align: middle;
 }
 
-.boton-container {
+.contenedor-botones {
     display: flex;
     justify-content: flex-end; 
     width: 100%; 
+    gap: 10px;
 }
 
 .boton-volver {
-    margin-left: auto; 
     background-color: #007bff;
     color: black;
     border-radius: 5px;
@@ -139,7 +200,11 @@
     display: flex; 
     align-items: center;
     justify-content: center; 
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.boton-carrito {
+    width: 50px;
 }
 
 form {
@@ -150,7 +215,7 @@ form {
 }
 
 h1{
-    padding-top: 20px;
+    padding-top: 70px;
     font-size:3rem;
 }
 
