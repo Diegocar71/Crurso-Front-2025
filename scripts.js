@@ -194,4 +194,56 @@ function mostrarMensaje(mensaje, colorFondo) {
         mensajeElemento.remove();
     }, 2000);
 }
+function simularPago() {
+
+    if (Object.keys(carrito).length === 0) {
+        mostrarMensaje("El Carrito está vacío. Agrega productos antes de proceder al pago.", "#f44336");
+        return;
+    }
+
+    let modal = document.createElement("div");
+    modal.id = "modal-pago";
+
+    let titulo = document.createElement("h3");
+    titulo.textContent = "Detalles de la Compra";
+    modal.appendChild(titulo);
+
+    let listaProductos = document.createElement("ul");
+    for (let producto in carrito) {
+        let item = document.createElement("li");
+        item.textContent = `${producto} (x${carrito[producto].cantidad}) - $${carrito[producto].cantidad * carrito[producto].precio}`;
+        listaProductos.appendChild(item);
+    }
+    modal.appendChild(listaProductos);
+
+    let total = document.createElement("p");
+    total.textContent = `Total a pagar: $${Object.values(carrito).reduce(
+        (sum, producto) => sum + producto.cantidad * producto.precio,
+        0
+    )}`;
+    modal.appendChild(total);
+
+    let confirmarBtn = document.createElement("button");
+    confirmarBtn.textContent = "Confirmar Pago";
+
+    confirmarBtn.onclick = function () {
+        mostrarMensaje("¡Gracias por tu compra! El pago se ha procesado correctamente.", "#4caf50");
+        document.body.removeChild(modal);
+        carrito = {}; 
+        actualizarCarrito(); 
+    };
+    modal.appendChild(confirmarBtn);
+
+    let cerrarBtn = document.createElement("button");
+    cerrarBtn.textContent = "Cancelar";
+
+    cerrarBtn.onclick = function () {
+        document.body.removeChild(modal);
+        mostrarMensaje("Pago cancelado.", "#ffc107");
+    };
+
+    modal.appendChild(cerrarBtn);
+    document.body.appendChild(modal);
+}
+
 

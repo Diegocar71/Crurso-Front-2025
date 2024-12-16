@@ -33,7 +33,10 @@
             <h3>Productos en el Carrito</h3>
             <ul id="lista-carrito"></ul>
             <p id="total-carrito">Total: $0</p>
-            <button class="boton-volver boton-carrito" onclick="cerrarCarrito()">Cerrar</button>
+            <div id="pagos" class="contenedor-botones">
+                <button class="boton-volver" onclick="simularPago()">Pagar Ahora</button>
+                <button class="boton-volver boton-carrito" onclick="cerrarCarrito()">Cerrar</button>
+            </div>
         </div>
 
         <h1 class="alineado">Venta de Implementos de Pesca</h1>
