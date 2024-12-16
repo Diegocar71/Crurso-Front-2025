@@ -7,16 +7,6 @@ document.getElementById('mensaje-form').addEventListener('submit', function(even
     }, 500); 
 });
 
-document.getElementById('reseña-form').addEventListener('submit', function(event) {
-    setTimeout(() => {
-        document.getElementById('tunombre').value = '';
-        document.getElementById('calificacion').value = '';
-        document.getElementById('comentario').value = '';
-        document.getElementById('reseña-form').scrollIntoView({ behavior: 'smooth' });
-    }, 500); 
-});
-
-
 document.getElementById("reseña-form").addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -202,6 +192,6 @@ function mostrarMensaje(mensaje, colorFondo) {
 
     setTimeout(() => {
         mensajeElemento.remove();
-    }, 3000);
+    }, 2000);
 }
 
